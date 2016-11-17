@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title> SACE </title>
+
+        <link href="assets/css/style.css" rel="stylesheet" media="screen">
+        <script>
+            function formatar(mascara, documento) {
+                var i = documento.value.length;
+                var saida = mascara.substring(0, 1);
+                var texto = mascara.substring(i)
+
+                if (texto.substring(0, 1) != saida) {
+                    documento.value += texto.substring(0, 1);
+                }
+
+            }
+        </script>
+
+
+    </head>
+
+    <body>
+
+    <center>
+
+        <img src="assets/imgs/icon.png" alt="imagem do sace"  height="300" width="550"/>
+        <form class="form-horizontal" action = "login.php" method="post">
+
+            <div class="control-group">
+                <label class="control-label" for="inputEmail" >CPF Supervisor</label>
+                <div class="controls">
+                    <input id="cpf" class="textBox" name="cpf" type="text" placeholder="Digite o seu CPF..." maxlength="14" OnKeyPress="formatar('###.###.###-##', this)"/> <!--OnKeyPress="formatar('###.###.###-##', this)-->
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">Senha</label>
+                <div class="controls">
+                    <input id="senha" class="textBox" name="senha" type="password" placeholder="Digite a sua senha..." />
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">                    
+                    <button class="btn-primary" id="btBorder" type="submit" name="entrar">Acessar</button>
+                </div>
+            </div>
+        </form>
+
+
+    </center>
+</body>
+
+</html>

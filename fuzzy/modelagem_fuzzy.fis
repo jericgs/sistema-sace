@@ -1,0 +1,84 @@
+[System]
+Name='modelagem_fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=37
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='QF'
+Range=[0 50]
+NumMFs=3
+MF1='Pouco':'trapmf',[0 0 8 10]
+MF2='Medio':'trimf',[9 15 25]
+MF3='Muito':'trimf',[25 50 50]
+
+[Input2]
+Name='QDep'
+Range=[0 3000]
+NumMFs=3
+MF1='Pouco':'trapmf',[0 0 500 500]
+MF2='Medio':'trimf',[300 900 1500]
+MF3='Muito':'trimf',[1500 3000 3000]
+
+[Input3]
+Name='NSB'
+Range=[0 10]
+NumMFs=4
+MF1='Pessimo':'trimf',[0 2 3]
+MF2='Regular':'trimf',[3 5 6]
+MF3='Bom':'trimf',[6 7 8]
+MF4='Otimo':'trimf',[8 9 10]
+
+[Output1]
+Name='FR'
+Range=[0 1]
+NumMFs=3
+MF1='Baixo':'trimf',[0 0.3 0.3]
+MF2='Medio':'trimf',[0.3 0.69 0.69]
+MF3='Alto':'trimf',[0.7 1 1]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
+1 1 4, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 1 (1) : 1
+1 2 3, 1 (1) : 1
+1 2 4, 1 (1) : 1
+1 3 1, 2 (1) : 1
+1 3 1, 2 (1) : 1
+1 3 2, 2 (1) : 1
+1 3 3, 1 (1) : 1
+1 3 4, 1 (1) : 1
+2 1 1, 1 (1) : 1
+2 1 2, 1 (1) : 1
+2 1 3, 1 (1) : 1
+2 1 4, 1 (1) : 1
+2 2 1, 2 (1) : 1
+2 2 2, 2 (1) : 1
+2 2 3, 2 (1) : 1
+2 2 4, 2 (1) : 1
+2 3 1, 2 (1) : 1
+2 3 2, 2 (1) : 1
+2 3 3, 2 (1) : 1
+2 3 4, 2 (1) : 1
+3 1 1, 3 (1) : 1
+3 1 2, 3 (1) : 1
+3 1 3, 3 (1) : 1
+3 1 4, 3 (1) : 1
+3 2 1, 3 (1) : 1
+3 2 2, 3 (1) : 1
+3 2 3, 3 (1) : 1
+3 2 4, 3 (1) : 1
+3 3 1, 3 (1) : 1
+3 3 2, 3 (1) : 1
+3 3 3, 3 (1) : 1
+3 3 4, 3 (1) : 1
