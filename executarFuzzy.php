@@ -30,9 +30,9 @@
         echo "Variavel nao setada";
     }    
 
-    $data = date('y/m/d');
-    //d-m-Y
-    $hora = date('H:i');
+    $data = date('Y/m/d');
+    //d-m-Y    
+    $hora = date('H:i:s');
     //H:i:s
 
     $command2 = "fuzzy\processamento.exe ".$nomeArea." ".$numImoveis." ".$numAgentes." ".$qf." ".$qdep." ".$nsb." ".$qtDias." ".$data." ".$hora."";

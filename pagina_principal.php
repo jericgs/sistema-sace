@@ -1,10 +1,66 @@
 <html>
     <head>
-        <title>SACE</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>SACE</title>       
+        
+        <!-- JQuery -->
+         <script src="assets/js/jquery.js"></script> 
+
+        <!-- Bootstrap CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Ícone -->
+        <link rel="icon" type="image/png" href="assets/imgs/icon.png"/>
+
+        <!-- JS -->
+        <script src="assets/js/bootstrap.min.js"></script>        
+
+        <!-- SweetAlert -->
+        <!--<script src="bootstrap/js/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="bootstrap/text/css" href="bootstrap/css/sweetalert.css"> -->
+        
     </head>
-    <body>        
+    
+    
+    
+    <body>
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <div class="navbar-header">                    
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+                        <span class="sr-only"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span>
+                    </button>                    
+                    <a class="navbar-brand" href="#">Sace</a> 
+                </div>
+
+
+
+                <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">                      
+                        <LI> <a href="#" class="ocorrencias" onclick="_gaq.push(['_trackEvent', 'example', 'try']);">Histórico de Cronogramas</A></LI> 
+                        
+                        <!--<script>
+                        document.querySelector('.Cronogramas').onclick = function () {
+                            swal("Notificação", "weugdyugsdu")
+                        };
+                        </script>--> 
+                        
+                        <li> <a href="finalizar" target="_parent">Sair</a> </li>
+                                                
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
         
          <aside>
             
@@ -95,31 +151,6 @@
             <input type="Submit" value="ADD">
         </form>   
         
-        
-        <h6>        
-            
-            <?php
-                session_start();     
-                
-                if(isset($_SESSION['confirmation'])){
-                    $confirmation = $_SESSION['confirmation'];
-                    if($confirmation){
-                        echo "Area salva com sucesso";
-                    }
-                }
-                
-                if(isset($_SESSION['confirmacao'])){
-                    $confirmacao = $_SESSION['confirmacao'];
-                    if($confirmacao){
-                        echo "Equipe salva com sucesso";
-                    }
-                }         
-                
-                $_SESSION['confirmacao'] = 0;
-                
-
-            ?>     
-        </h6>
         
     </center>         
         
