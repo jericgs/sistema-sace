@@ -17,15 +17,14 @@
 	</ul>
          
         
-    <center>        
-     
+    <center>    
         
         <form class="form-horizontal" action="executarFuzzy.php" method="post">
             <fieldset>               
 
                 <!-- Select Basic -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="selectbasic">Escolha um identificador para a &aacute;rea</label>
+                    <label class="col-md-4 control-label" for="nomeArea">Escolha um identificador para a &aacute;rea</label>
                     <div class="col-md-2">
                         <select id="selectbasic" name="nomeArea" class="form-control">
                             <option value="A1">A1</option> 
@@ -44,7 +43,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">N&uacute;mero de im&oacute;veis da &aacute;rea</label>  
+                    <label class="col-md-4 control-label" for="numAgentes">N&uacute;mero de im&oacute;veis da &aacute;rea</label>  
                     <div class="col-md-4">
                         <input id="textinput" name="numAgentes" type="number" placeholder="Número de imóveis da área" class="form-control input-md">
                     </div>
@@ -52,21 +51,21 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">N&uacute;mero de agentes para a &aacute;rea</label>  
+                    <label class="col-md-4 control-label" for="numAgentes">N&uacute;mero de agentes para a &aacute;rea</label>  
                     <div class="col-md-4">
                         <input id="textinput" name="numAgentes" type="number" placeholder="Número de agentes para a área" class="form-control input-md">
                     </div>
                 </div>
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Quantidade de focos da &aacute;rea</label>  
+                    <label class="col-md-4 control-label" for="qf">Quantidade de focos da &aacute;rea</label>  
                     <div class="col-md-4">
                         <input id="textinput" name="qf" type="number" placeholder="Quantidade de focos da área" class="form-control input-md">
                     </div>
                 </div>
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Quantidade de dep&oacute;sitos da &aacute;rea</label>  
+                    <label class="col-md-4 control-label" for="qdep">Quantidade de dep&oacute;sitos da &aacute;rea</label>  
                     <div class="col-md-4">
                         <input id="textinput" name="qdep" type="number" placeholder="Quantidade de depósitos da área" class="form-control input-md">
                     </div>
@@ -74,7 +73,7 @@
                 
                  <!-- Select Basic -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="selectbasic">N&iacute;vel de saneamento b&aacute;sico da &aacute;rea</label>
+                    <label class="col-md-4 control-label" for="nsb">N&iacute;vel de saneamento b&aacute;sico da &aacute;rea</label>
                     <div class="col-md-4">
                         <select id="selectbasic" name="nsb" class="form-control">
                             <option value="Interface">NSB</option> 
@@ -95,16 +94,14 @@
                  
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Quantidade de dias necess&aacute;rios para atender a &aacute;rea</label>  
+                    <label class="col-md-4 control-label" for="qtDias">Quantidade de dias necess&aacute;rios para atender a &aacute;rea</label>  
                     <div class="col-md-4">
                         <input id="textinput" name="qtDias" type="number" placeholder="Quantidade de dias" class="form-control input-md">
                     </div>
-                </div>               
-
-               
+                </div>                     
                             <CENTER>
                                 <input class="btn btn-primary" type="Submit" value="Adicionar ">                                
-                            </CENTER>                     
+                            </CENTER>                  
                       
 
             </fieldset>
