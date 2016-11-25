@@ -13,7 +13,7 @@
           <li><a href="adicionarEquipes.php">Adicionar Equipes</a></li>
           <li><a href="realizarCronograma.php">Realizar Cronograma</a></li>
           <li><a href="visualizarCronograma.php">Visualizar Cronograma</a></li>
-          <li><a href="sobre.php">Sobre</a></li>	  
+          <li><a href="sair.php">Sair</a></li>	  
 	</ul>
          
         
@@ -26,12 +26,12 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="nomeArea">Escolha um identificador para a &aacute;rea</label>
                     <div class="col-md-2">
-                        <select id="selectbasic" name="nomeArea" class="form-control">
+                        <select id= "nomeArea" name="nomeArea" class="form-control">
                             <option value="A1">A1</option> 
                             <option value="A2">A2</option> 
                             <option value="A3">A3</option> 
                             <option value="A4">A4</option> 
-                            <option value="A5</">A5</option> 
+                            <option value="A5">A5</option> 
                             <option value="A6">A6 </option> 
                             <option value="A7">A7</option> 
                             <option value="A8">A8</option> 
@@ -43,9 +43,9 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="numAgentes">N&uacute;mero de im&oacute;veis da &aacute;rea</label>  
+                    <label class="col-md-4 control-label" for="numImoveis">N&uacute;mero de im&oacute;veis da &aacute;rea</label>  
                     <div class="col-md-4">
-                        <input id="textinput" name="numAgentes" type="number" placeholder="Número de imóveis da área" class="form-control input-md">
+                        <input id="numImoveis" name="numImoveis" type="number" placeholder="Número de imóveis da área" class="form-control input-md">
                     </div>
                 </div>
 
@@ -53,21 +53,21 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="numAgentes">N&uacute;mero de agentes para a &aacute;rea</label>  
                     <div class="col-md-4">
-                        <input id="textinput" name="numAgentes" type="number" placeholder="Número de agentes para a área" class="form-control input-md">
+                        <input id="numAgentes" name="numAgentes" type="number" placeholder="Número de agentes para a área" class="form-control input-md">
                     </div>
                 </div>
                 <!-- Text input-->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="qf">Quantidade de focos da &aacute;rea</label>  
                     <div class="col-md-4">
-                        <input id="textinput" name="qf" type="number" placeholder="Quantidade de focos da área" class="form-control input-md">
+                        <input id="qf" name="qf" type="number" placeholder="Quantidade de focos da área" class="form-control input-md">
                     </div>
                 </div>
                 <!-- Text input-->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="qdep">Quantidade de dep&oacute;sitos da &aacute;rea</label>  
                     <div class="col-md-4">
-                        <input id="textinput" name="qdep" type="number" placeholder="Quantidade de depósitos da área" class="form-control input-md">
+                        <input id="qdep" name="qdep" type="number" placeholder="Quantidade de depósitos da área" class="form-control input-md">
                     </div>
                 </div>
                 
@@ -75,7 +75,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="nsb">N&iacute;vel de saneamento b&aacute;sico da &aacute;rea</label>
                     <div class="col-md-4">
-                        <select id="selectbasic" name="nsb" class="form-control">
+                        <select id="nsb" name="nsb" class="form-control">
                             <option value="Interface">NSB</option> 
                             <option value="0">0</option> 
                             <option value="1">1</option> 
@@ -96,7 +96,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="qtDias">Quantidade de dias necess&aacute;rios para atender a &aacute;rea</label>  
                     <div class="col-md-4">
-                        <input id="textinput" name="qtDias" type="number" placeholder="Quantidade de dias" class="form-control input-md">
+                        <input id="qtDias" name="qtDias" type="number" placeholder="Quantidade de dias" class="form-control input-md">
                     </div>
                 </div>                     
                             <CENTER>
@@ -118,16 +118,9 @@
                     if($confirmation){
                         echo "Area salva com sucesso";
                     }
-                }
+                }                
                 
-                if(isset($_SESSION['confirmacao'])){
-                    $confirmacao = $_SESSION['confirmacao'];
-                    if($confirmacao){
-                        echo "Equipe salva com sucesso";
-                    }
-                }         
-                
-                $_SESSION['confirmacao'] = 0;
+                $_SESSION['confirmation'] = 0;
                 
 
             ?>     

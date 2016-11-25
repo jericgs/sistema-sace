@@ -1,7 +1,7 @@
 <html lang="pt">
 <head>
 	<meta charset="UTF-8">
-	<title>Menu 5</title>
+	<title>SACE</title>
         <link href="assets/css/estrutura.css" rel="stylesheet">
         <link href="assets/css/bootstrap.css" rel="stylesheet">
 
@@ -13,7 +13,7 @@
           <li class="current"><a href="adicionarEquipes.php">Adicionar Equipes</a></li>
           <li><a href="realizarCronograma.php">Realizar Cronograma</a></li>
           <li><a href="visualizarCronograma.php">Visualizar Cronograma</a></li>
-          <li><a href="sobre.php">Sobre</a></li>	  
+          <li><a href="sair.php">Sair</a></li>	  
 	</ul>
     
     <form class="form-horizontal" action="salvarEquipes.php" method="post">
@@ -21,7 +21,7 @@
 
             <!-- Select Basic -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="selectbasic">Escolha um c&oacute;digo para a equipe:</label>
+                <label class="col-md-4 control-label" for="selectbasic">Escolha um c&oacute;digo para a equipe</label>
                 <div class="col-md-2">
                     <select id="selectbasic" name="cod_equipe" class="form-control">
                         <option value="Interface2">EQUIPES</option> 

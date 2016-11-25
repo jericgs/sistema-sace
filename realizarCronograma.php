@@ -5,6 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
          <link href="assets/css/estrutura.css" rel="stylesheet">
          <link href="assets/css/bootstrap.css" rel="stylesheet">
+         <style type="text/css">
+             #content
+             {
+                 width: 50%;
+                 height: 50%;                 
+                 top: 0; 
+                 bottom: 0;
+                 left: 0; 
+                 right: 0;
+                 margin: auto;                 
+             }
+         </style>
     </head>
     <body>            
        
@@ -14,7 +26,7 @@
           <li><a href="adicionarEquipes.php">Adicionar Equipes</a></li>
           <li class="current"><a href="realizarCronograma.php">Realizar Cronograma</a></li>
           <li><a href="visualizarCronograma.php">Visualizar Cronograma</a></li>
-          <li><a href="sobre.php">Sobre</a></li>	  
+          <li><a href="sair.php">Sair</a></li>	  
 	</ul>
         
         <CENTER>   
@@ -25,7 +37,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">N&uacute;mero de areas do cronograma</label>  
+                    <label class="col-md-4 control-label" for="textinput">N&uacute;mero de &aacute;reas do cronograma</label>  
                     <div class="col-md-4">
                         <input id="textinput" name="areas_cro" type="number" placeholder="Número de áreas" class="form-control input-md">
                     </div>
@@ -66,7 +78,8 @@
            $id2 = 0; 
            $query = mysql_query("SELECT nomeArea FROM dadosformulario");
            
-           echo '<form action="exibirCrograma.php" method="POST">';   
+           echo "<div id=\"content\" class=\"form-group\">";
+           echo '<form action="exibirCrograma.php" method="POST" class=\"form-horizontal\">';   
            
            if($areas>0 && $equipes>0){
                
@@ -91,18 +104,17 @@
 
                     echo "</select>";
                  
-                }          
-                
-               
+                }            
            }else{
-               echo 'Entrada invalida';
-           }
+               echo '<h6>Entrada inválida</h6>';
+           }  
            
-           echo '<br><br><input class="btn btn-primary" type="submit" value="Gerar" />';
+           echo "<br>";
+           echo " <input class=\"btn btn-primary\" type=\"Submit\" value=\"Gerar\" />";
+           //echo " <input type=\"Submit\" value=\"Gerar\" />";
            echo '</form>';
-       
-       }
-       
+           echo '</div>';       
+       }       
        ?>
        </CENTER>
         

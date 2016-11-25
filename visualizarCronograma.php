@@ -1,7 +1,7 @@
 <html lang="pt">
 <head>
 	<meta charset="UTF-8">
-	<title>Menu 5</title>
+	<title>SACE</title>
         <link href="assets/css/estrutura.css" rel="stylesheet">
         <link href="assets/css/bootstrap.css" rel="stylesheet">
 
@@ -13,7 +13,7 @@
           <li><a href="adicionarEquipes.php">Adicionar Equipes</a></li>
           <li><a href="realizarCronograma.php">Realizar Cronograma</a></li>
           <li class="current"><a href="visualizarCronograma.php">Visualizar Cronograma</a></li>
-          <li><a href="sobre.php">Sobre</a></li>	  
+          <li><a href="sair.php">Sair</a></li>	  
 	</ul>
     <h1> aqui a visualizar cronograma </h1> 
     
