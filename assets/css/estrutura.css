@@ -39,16 +39,16 @@
 .snip1189 a:before {
   left: 0;
   top: 0;
-  border-left: 3px solid #1A237E;
-  border-top: 3px solid #1A237E;
+  border-left: 3px solid #1E90FF;
+  border-top: 3px solid #1E90FF;
   -webkit-transform: translate(100%, 50%);
   transform: translate(100%, 50%);
 }
 .snip1189 a:after {
   right: 0;
   bottom: 0;
-  border-right: 3px solid #1A237E;
-  border-bottom: 3px solid #1A237E;
+  border-right: 3px solid #1E90FF;
+  border-bottom: 3px solid #1E90FF;
   -webkit-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
 }

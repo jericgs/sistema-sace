@@ -27,7 +27,7 @@ $senha = $_POST["senha"];
 // Usuário não forneceu a senha ou o login 
 if(!$cpf || !$senha){ 
 	//echo "Você deve digitar sua senha e login!"; 
-	echo"<script language='javascript' type='text/javascript'>alert('Voce deve digitar sua senha e login!');window.location.href='index.html';</script>";
+	echo"<script language='javascript' type='text/javascript'>alert('Você deve digitar sua senha e login');window.location.href='index.html';</script>";
         die();
 	exit; 
 } 
@@ -64,7 +64,7 @@ if($total) {
 }else{ 
 	// Login inválido 
 	
-	echo"<script language='javascript' type='text/javascript'>alert('O login fornecido por voce e inexistente!');window.location.href='index.html';</script>";
+	echo"<script language='javascript' type='text/javascript'>alert('Entrada negada');window.location.href='index.html';</script>";
         die();
 	exit; 
 } 

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
          <link href="assets/css/estrutura.css" rel="stylesheet">
          <link href="assets/css/bootstrap.css" rel="stylesheet">
+         <link rel="icon" type="image/png" href="assets/imgs/icon.png"/>
          <style type="text/css">
              #content
              {
