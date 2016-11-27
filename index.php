@@ -50,8 +50,8 @@
                 </div>
                 
                 <a class="link" href="#">Esqueceu sua senha?</a>
-                <button class="log-btn" id="btBorder" type="submit" name="entrar">entrar</button> <br>
-                <button class="log-btn" id="btBorder" type="submit" name="outro">cadastrar</button> 
+                <button class="log-btn" id="btBorder" type="submit" name="entrar">entrar</button> 
+<!--                <button class="log-btn" id="btBorder" type="submit" name="outro">cadastrar</button> -->
             </form>
         </div>
         
