@@ -4,14 +4,6 @@ require "conexao.php";
 
 // Inicia sessões 
 session_start(); 
-/*
-// Recupera o login 
-$cpf = isset($_POST["cpf"]) ? addslashes(trim($_POST["cpf"])) : FALSE; 
-// Recupera a senha, a criptografando em MD5 
-$senha = isset($_POST["senha"]) ? md5(trim($_POST["senha"])) : FALSE; 
-
-*/
-
 //$cpf='11088465480';
 //$senha='123';
 

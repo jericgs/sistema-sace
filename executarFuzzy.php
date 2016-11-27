@@ -9,7 +9,7 @@
     <body>
         
         <?php
-        session_start();
+        
 
         if (!isset($_POST['nomeArea'])) {
             echo 'nome area não setada';
@@ -70,15 +70,10 @@
         $command2 = "fuzzy\processamento.exe " . $nomeArea . " " . $numImoveis . " " . $numAgentes . " " . $qf . " " . $qdep . " " . $nsb . " " . $qtDias . " " . $data . " " . $hora . "";
         
         set_time_limit(45);
-        exec($command2);
-
-        //$_SESSION['confirmation'] = 1;
+        exec($command2);        
         
         echo "<script>alert(\"Dados adicionados com sucesso\")</script>";        
-        echo "<script language = \"JavaScript\">location.href = \"pagina_principal.php\"</script>";
-        
-        //header("Location:pagina_principal.php");
-        //Rodando inferencia fuzzy
+        echo "<script language = \"JavaScript\">location.href = \"pagina_principal.php\"</script>";      
 
     ?>  
 

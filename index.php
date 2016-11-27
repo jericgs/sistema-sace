@@ -46,13 +46,15 @@
                     <div class="controls">
                         <input id="senha" class="form-control" name="senha" maxlength="8" type="password" placeholder="Senha" />
                     <i class="fa fa-lock"></i>
+                    </div>
                 </div>
-                <span class="alert">Invalid Credentials</span>
+                
                 <a class="link" href="#">Esqueceu sua senha?</a>
-                <button class="log-btn" id="btBorder" type="submit" name="entrar">entrar</button> 
+                <button class="log-btn" id="btBorder" type="submit" name="entrar">entrar</button> <br>
+                <button class="log-btn" id="btBorder" type="submit" name="outro">cadastrar</button> 
             </form>
-            
-        </div>           
+        </div>
+        
                 
                 
                 
@@ -66,15 +68,7 @@
                       </div>
                       </div>";
             }*/
-          
-          
           ?>
-         
-
-<!--        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
-
-<!--        <script src="js/login.js"></script>-->
-
     </body>
 
 </html>

@@ -106,26 +106,8 @@
                       
 
             </fieldset>
-        </form> 
-            
+        </form>   
         
-        <h6>        
-            
-            <?php
-                //session_start();     
-                
-                if(isset($_SESSION['confirmation'])){
-                    $confirmation = $_SESSION['confirmation'];
-                    if($confirmation){
-                        echo "Area salva com sucesso";
-                    }
-                }                
-                
-                $_SESSION['confirmation'] = 0;
-                
-
-            ?>     
-        </h6>
         
     </center>         
         

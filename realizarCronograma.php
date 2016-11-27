@@ -7,8 +7,7 @@
          <link href="assets/css/bootstrap.css" rel="stylesheet">
          <link rel="icon" type="image/png" href="assets/imgs/icon.png"/>
          <style type="text/css">
-             #content
-             {
+             #content{
                  width: 50%;
                  height: 50%;                 
                  top: 0; 
@@ -112,8 +111,7 @@
            }  
            
            echo "<br>";
-           echo " <input class=\"btn btn-primary\" type=\"Submit\" value=\"Gerar\" />";
-           //echo " <input type=\"Submit\" value=\"Gerar\" />";
+           echo " <input class=\"btn btn-primary\" type=\"Submit\" value=\"Gerar\" />";           
            echo '</form>';
            echo '</div>';       
        }       

@@ -14,8 +14,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <style type="text/css">
-                 #content
-                 {
+                 #content{
                      width: 65%;
                      height: 65%;                 
                      top: 0; 
@@ -46,16 +45,7 @@
                 $query = mysql_query("SELECT DISTINCT data,hora FROM cronograma");
                 $cont = 1;
 
-                while ($valores = mysql_fetch_array($query)) {
-                    //echo "Cronograma ".$cont."-->".$valores['data']." ".$valores['hora'];
-                    $totalDias = mysql_query("SELECT SUM(diasAtend) FROM cronograma WHERE data='".$valores['data']."' and hora ='".$valores['hora']."';");
-                    $totalfr = mysql_query("SELECT SUM(fatorRisco) FROM cronograma WHERE data='".$valores['data']."' and hora ='".$valores['hora']."';");
-                    $resultado = mysql_fetch_row($totalDias);
-                    $frtotal = mysql_fetch_row($totalfr);
-                    
-                   /* while($diasTotais = mysql_fetch_array($totalDias)){
-                        $resultado = $diasTotais['diasAtend'];
-                    }*/
+                while ($valores = mysql_fetch_array($query)) {                    
 
                     echo "<div class=\"panel panel-default\">                    
                     <div class=\"panel-heading\">
@@ -69,6 +59,10 @@
                     $equipesQuery = mysql_query("SELECT DISTINCT codEqp FROM cronograma WHERE data='".$valores['data']."' and hora ='".$valores['hora']."'");
                     while($equipes = mysql_fetch_array($equipesQuery)){
                         $query2 = mysql_query("SELECT * FROM cronograma WHERE data='".$valores['data']."' and hora ='".$valores['hora']."' and codEqp='".$equipes['codEqp']."'");
+                        $totalDias = mysql_query("SELECT MAX(diasAtend) FROM cronograma WHERE data='".$valores['data']."' and hora ='".$valores['hora']."' and codEqp='".$equipes['codEqp']."'");
+                        $totalfr = mysql_query("SELECT SUM(fatorRisco) FROM cronograma WHERE data='".$valores['data']."' and hora ='".$valores['hora']."' and codEqp='".$equipes['codEqp']."'");
+                        $resultado = mysql_fetch_row($totalDias);
+                        $frtotal = mysql_fetch_row($totalfr);
                         
                         echo "<div class=\"table-responsive\">"
                                 . "<table class=\"table\">"
