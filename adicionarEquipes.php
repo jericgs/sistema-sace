@@ -16,6 +16,7 @@
           <li><a href="visualizarCronograma.php">Visualizar Cronograma</a></li>
           <li><a href="sair.php">Sair</a></li>	  
 	</ul>
+        <br><br>
     
     <form class="form-horizontal" action="salvarEquipes.php" method="post">
         <fieldset>           
@@ -55,30 +56,6 @@
             </CENTER>>
 
         </fieldset>
-    </form>
-    
-    <!--<h1>Adicionar equipes</h1><br>
-
-    <form action="salvarEquipes.php" method="post">             
-        Digite o codigo ou nome da equipe: <select name="cod_equipe">
-            <option value="Interface2">EQUIPES</option> 
-            <option value="E1">E1</option> 
-            <option value="E2">E2</option> 
-            <option value="E3">E3</option> 
-            <option value="E4">E4</option> 
-            <option value="E5">E5</option> 
-            <option value="E6">E6 </option> 
-            <option value="E7">E7</option> 
-            <option value="E8">E8</option> 
-            <option value="E9">E9 </option> 
-            <option value="E10">E10 </option>                     
-        </select><br>
-        Digite o tamanho da equipe (numero de agentes) <input type="number" name="num_agentes" size="8"><br>
-        <input type="Submit" value="ADD">
-    </form>   --.
-    
-    
-    
-	
+    </form>	
 </body>
 </html>

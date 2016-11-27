@@ -29,6 +29,7 @@
           <li><a href="visualizarCronograma.php">Visualizar Cronograma</a></li>
           <li><a href="sair.php">Sair</a></li>	  
 	</ul>
+        <br><br>
         
         <CENTER>   
         

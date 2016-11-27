@@ -17,7 +17,7 @@
           <li><a href="sair.php">Sair</a></li>	  
 	</ul>
          
-        
+        <br><br>
     <center>    
         
         <form class="form-horizontal" action="executarFuzzy.php" method="post">
