@@ -13,7 +13,7 @@
            <li class="current"><a href="pagina_principal.php">Adicionar &Aacute;reas</a></li>
           <li><a href="adicionarEquipes.php">Adicionar Equipes</a></li>
           <li><a href="realizarCronograma.php">Realizar Cronograma</a></li>
-          <li><a href="visualizarCronograma.php">Visualizar Cronograma</a></li>
+          <li><a href="visualizarCronograma.php">Visualizar Cronogramas</a></li>
           <li><a href="sair.php">Sair</a></li>	  
 	</ul>
          

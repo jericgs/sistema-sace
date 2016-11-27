@@ -1,10 +1,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> SACE </title>
+        <title> SACE </title>   
 
         <!-- Bootstrap CSS -->
         <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+<!--        <link href="assets/css/bootstrap.css" rel="stylesheet">-->
+        <!--
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
         <link rel="stylesheet" href="assets/css/style.css">
 
@@ -39,7 +44,7 @@
                 </div>
                 <div class="form-group log-status">
                     <div class="controls">
-                        <input id="senha" class="form-control" name="senha" type="password" placeholder="Senha" />
+                        <input id="senha" class="form-control" name="senha" maxlength="8" type="password" placeholder="Senha" />
                     <i class="fa fa-lock"></i>
                 </div>
                 <span class="alert">Invalid Credentials</span>
@@ -47,11 +52,28 @@
                 <button class="log-btn" id="btBorder" type="submit" name="entrar">entrar</button> 
             </form>
             
-        </div>
+        </div>           
+                
+                
+                
+          <?php
+            /*$var = 2+2;
+            if($var==4){
+                echo "<div class=\"container\">
+                    <div class=\"alert alert-danger alert-dismissable\">
+                        <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">×</a>
+                        <strong>Login Inválido</strong> Senha e/ou CPF inválidos, verifique se os dados informados fora digitados corretamente.
+                      </div>
+                      </div>";
+            }*/
+          
+          
+          ?>
+         
 
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!--        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
 
-        <script src="js/login.js"></script>
+<!--        <script src="js/login.js"></script>-->
 
     </body>
 
