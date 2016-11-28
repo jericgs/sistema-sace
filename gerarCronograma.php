@@ -26,16 +26,24 @@
             $valoresAreas[$i]."'");        
     }    
     
+    $stringAreas = "";
     
     for($j = 0;$j< count($valoresAreas);$j++){
         
+        //$stringTotal = $stringAreas.
+        
         while ($valoresAreasRecebidos = mysql_fetch_array($query[$j])) {
             
-            array_push($arrayAreas, $valoresAreasRecebidos['nomeArea']);
-            array_push($arrayAreas, $valoresAreasRecebidos['numImoveis']);
-            array_push($arrayAreas, $valoresAreasRecebidos['numAgentes']);
-            array_push($arrayAreas, $valoresAreasRecebidos['fator_risco']);
-            array_push($arrayAreas, $valoresAreasRecebidos['qtDias']);
+            $stringAreas .=  $valoresAreasRecebidos['nomeArea']." ".$valoresAreasRecebidos['numImoveis']." "
+                           .$valoresAreasRecebidos['numAgentes']." ".$valoresAreasRecebidos['fator_risco']." "
+                           .$valoresAreasRecebidos['qtDias']."#";
+            
+            
+//            array_push($arrayAreas, $valoresAreasRecebidos['nomeArea']);
+//            array_push($arrayAreas, $valoresAreasRecebidos['numImoveis']);
+//            array_push($arrayAreas, $valoresAreasRecebidos['numAgentes']);
+//            array_push($arrayAreas, $valoresAreasRecebidos['fator_risco']);
+//            array_push($arrayAreas, $valoresAreasRecebidos['qtDias']);
 
             /*echo $valoresAreasRecebidos['nomeArea'] . " " . $valoresAreasRecebidos['numImoveis'] . " "
             . $valoresAreasRecebidos['numAgentes'] . " " . $valoresAreasRecebidos['fator_risco'] . " "
@@ -43,9 +51,11 @@
         }        
     }
     
-    for($w = 0;$w<count($arrayAreas);$w++){
+    /*for($w = 0;$w<count($arrayAreas);$w++){
         echo "areas[".$w."] = ".$arrayAreas[$w]."<br>";
-    }
+    }*/
+    
+    echo $stringAreas;
     
     //-------------IMPRIME AS EQUIPES------
     
@@ -57,20 +67,28 @@
             $valoresEquipes[$k]."'");        
     }      
     
+    $stringEquipes = "";
+    
     for($l = 0;$l<count($valoresEquipes);$l++){
         
         while($valoresEquipesRecebidos = mysql_fetch_array($query2[$l])) {
             
-            array_push($arrayEquipes, $valoresEquipesRecebidos['cod_equipe']);
-            array_push($arrayEquipes, $valoresEquipesRecebidos['num_agentes']);
+            
+              $stringEquipes .= $valoresEquipesRecebidos['cod_equipe']." ".$valoresEquipesRecebidos['num_agentes']."#";
+//            array_push($arrayEquipes, $valoresEquipesRecebidos['cod_equipe']);
+//            array_push($arrayEquipes, $valoresEquipesRecebidos['num_agentes']);
             
 //            echo $valoresEquipesRecebidos['cod_equipe']." ".$valoresEquipesRecebidos['num_agentes'];
         }
     }   
     
-    for($t = 0;$t<count($arrayEquipes);$t++){
+    /*for($t = 0;$t<count($arrayEquipes);$t++){
         echo "equipes[".$t."] = ".$arrayEquipes[$t]."<br>";
-    }
+    }*/
+    
+    echo "<BR><BR>";
+    echo $stringEquipes;
+    echo "<BR><BR>";
     
     $data = date('Y/m/d');
         //d-m-Y    
@@ -92,7 +110,7 @@
 //        $codEquipe = '6';
 //        $numAgentesEqp = '7';
 
-        $command2 = "metaheuristicas\Test2.exe " . $arrayAreas . " " . $arrayEquipes . " " . $data . " " . $hora . "";
+        $command2 = "metaheuristicas\Test2.exe " . $stringAreas . " " . $stringEquipes . " " . $data . " " . $hora . "";
        
         exec($command2);
 ?>
