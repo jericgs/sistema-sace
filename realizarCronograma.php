@@ -80,7 +80,7 @@
            $query = mysql_query("SELECT nomeArea FROM dadosformulario");
            
            echo "<div id=\"content\" class=\"form-group\">";
-           echo '<form action="exibirCrograma.php" method="POST" class=\"form-horizontal\">';   
+           echo '<form action="gerarCronograma.php" method="POST" class=\"form-horizontal\">';   
            
            if($areas>0 && $equipes>0){
                
@@ -111,7 +111,7 @@
            }  
            
            echo "<br>";
-           echo " <input class=\"btn btn-primary\" type=\"Submit\" value=\"Gerar\" />";           
+           echo " <input class=\"btn btn-primary\" type=\"Submit\" value=\"Gerar e Salvar\" />";           
            echo '</form>';
            echo '</div>';       
        }       
