@@ -1,0 +1,20 @@
+
+--------------------- Resultado(Grasp) ----------------------------
+
+Fator de Risco: 164.3 - Dias solucao: 19
+
+Equipe: E2 - Fator de risco: 76.6 - Dias de atendimento: 15
+Codigo da area: A3 - Dias de atendimento: 3 Fator de risco: 9.3 - Ordem: 1
+Codigo da area: A2 - Dias de atendimento: 8 Fator de risco: 25.6 - Ordem: 2
+Codigo da area: A6 - Dias de atendimento: 10 Fator de risco: 12 - Ordem: 3
+Codigo da area: A1 - Dias de atendimento: 12 Fator de risco: 13.2 - Ordem: 4
+Codigo da area: A9 - Dias de atendimento: 15 Fator de risco: 16.5 - Ordem: 5
+
+Equipe: E1 - Fator de risco: 87.7 - Dias de atendimento: 19
+Codigo da area: A8 - Dias de atendimento: 3 Fator de risco: 9.6 - Ordem: 1
+Codigo da area: A7 - Dias de atendimento: 8 Fator de risco: 24.8 - Ordem: 2
+Codigo da area: A10 - Dias de atendimento: 12 Fator de risco: 14.4 - Ordem: 3
+Codigo da area: A4 - Dias de atendimento: 15 Fator de risco: 18 - Ordem: 4
+Codigo da area: A5 - Dias de atendimento: 19 Fator de risco: 20.9 - Ordem: 5
+
+Tempo de execucao(segundos): 0.01

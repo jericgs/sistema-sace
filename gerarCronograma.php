@@ -1,6 +1,14 @@
 <?php    
     //session_start();
     include 'conexao.php';
+    
+    
+//    $nameAreas = 'arquivo/areas.txt';
+//    $nameEquipe = 'arquivo/equipes.txt';
+//    //$text = 'alguma coisa';
+//    $fileAreas = fopen($nameAreas,'w+');
+//    $fileEquipes = fopen($nameEquipe,'w+');
+    
 
     $valoresAreas = array();
     $valoresEquipes = array();
@@ -16,6 +24,7 @@
         }        
         
     }          
+    
     
     //----------IMPRIME AS AREAS-----
     $query = array();
@@ -34,9 +43,13 @@
         
         while ($valoresAreasRecebidos = mysql_fetch_array($query[$j])) {
             
+            /*$stringAreas .=  $valoresAreasRecebidos['nomeArea']."/".$valoresAreasRecebidos['numImoveis']."/"
+                           .$valoresAreasRecebidos['numAgentes']."/".$valoresAreasRecebidos['fator_risco']."/"
+                           .$valoresAreasRecebidos['qtDias']."#";*/
             $stringAreas .=  $valoresAreasRecebidos['nomeArea']." ".$valoresAreasRecebidos['numImoveis']." "
                            .$valoresAreasRecebidos['numAgentes']." ".$valoresAreasRecebidos['fator_risco']." "
-                           .$valoresAreasRecebidos['qtDias']."#";
+                           .$valoresAreasRecebidos['qtDias']."\n";    
+            
             
             
 //            array_push($arrayAreas, $valoresAreasRecebidos['nomeArea']);
@@ -51,11 +64,14 @@
         }        
     }
     
+    //fwrite($fileAreas, $stringAreas);
+//    fclose($fileAreas);
+    
     /*for($w = 0;$w<count($arrayAreas);$w++){
         echo "areas[".$w."] = ".$arrayAreas[$w]."<br>";
     }*/
     
-    echo $stringAreas;
+    echo "String Areas= ".$stringAreas;
     
     //-------------IMPRIME AS EQUIPES------
     
@@ -74,20 +90,28 @@
         while($valoresEquipesRecebidos = mysql_fetch_array($query2[$l])) {
             
             
-              $stringEquipes .= $valoresEquipesRecebidos['cod_equipe']." ".$valoresEquipesRecebidos['num_agentes']."#";
+              //$stringEquipes .= $valoresEquipesRecebidos['cod_equipe']."/".$valoresEquipesRecebidos['num_agentes']."#";
+              $stringEquipes .= $valoresEquipesRecebidos['cod_equipe']." ".$valoresEquipesRecebidos['num_agentes']."\n";
 //            array_push($arrayEquipes, $valoresEquipesRecebidos['cod_equipe']);
 //            array_push($arrayEquipes, $valoresEquipesRecebidos['num_agentes']);
             
-//            echo $valoresEquipesRecebidos['cod_equipe']." ".$valoresEquipesRecebidos['num_agentes'];
+//            echo $valoresEquipesRecebidos['cod_equipe']." ".$valoresEquipesRecebidos['num_agentes'];             
+              
+              
         }
+        
     }   
+    
+    //fwrite($fileEquipes, $stringEquipes);
+    
+//    fclose($fileEquipes);
     
     /*for($t = 0;$t<count($arrayEquipes);$t++){
         echo "equipes[".$t."] = ".$arrayEquipes[$t]."<br>";
     }*/
     
     echo "<BR><BR>";
-    echo $stringEquipes;
+    echo "String Equipes = ".$stringEquipes;
     echo "<BR><BR>";
     
     $data = date('Y/m/d');
@@ -99,18 +123,17 @@
     echo $data."<br>";
     echo $hora;
     
-    // Áreas
-//        $codArea = '1';
-//        $numImoveisM = '2';
-//        $numAgenteN = '3';
-//        $fatorRA = '4';
-//        $diasAtenArea = '5';
-//        
-//        //Equipes
-//        $codEquipe = '6';
-//        $numAgentesEqp = '7';
+    /*$name = 'arquivo/arquivo.txt';
+    $text = 'alguma coisa';
+    $file = fopen($name,'a');
+    fwrite($file, $text);
+    fclose($file);*/
 
-        $command2 = "metaheuristicas\Test2.exe " . $stringAreas . " " . $stringEquipes . " " . $data . " " . $hora . "";
-       
-        exec($command2);
+
+
+//$command2 = "metaheuristicas\testeToken.exe " . $stringAreas . " " . $stringEquipes . " " . $data . " " . $hora . "";
+    $command2 = "metaheuristicas\Cronograma.exe ";       
+    exec($command2);
+    echo "<script>alert(\"Cronograma gerado e salvo com sucesso\")</script>";        
+    echo "<script language = \"JavaScript\">location.href = \"realizarCronograma.php\"</script>";
 ?>
